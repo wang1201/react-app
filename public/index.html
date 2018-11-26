@@ -8,7 +8,8 @@
     <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+    --> 
+    <link rel="stylesheet" href="../src/assets/stylesheets/reset.css" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
@@ -20,8 +21,14 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <style>
+      html,body,#root,.app{
+        height: 100%;
+        width: 100%;
+      }
+    </style>
   </head>
-  <body>
+  <body style='background:#151515;'>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
