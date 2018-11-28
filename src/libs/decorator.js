@@ -29,4 +29,23 @@ function util_decorator(target) {
         }
     }
 }
-export { util_decorator }
+
+
+function inject_unount(target){
+    let next = target.prototype.componentWillUnmount;
+    //改裝componentWillUnmount,销毁的时候记录一下
+    target.prototype.componentWillUnmount = function(){
+        if(next) next.call(this,...arguments);
+        this.unmount = true;
+    }
+    //对setState的改装，setState查看目前是否已经销毁
+    let setState = target.prototype.setState
+    target.prototype.setState = function(){
+        if(this.unmount) return;
+        setState.call(this,...arguments)
+    }
+}
+
+
+export { util_decorator,inject_unount }
+
