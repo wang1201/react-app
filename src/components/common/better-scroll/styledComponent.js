@@ -15,13 +15,44 @@ export const betterScroll = styled.div `
                 font-size: .426667rem;
             }
         }
+        .recommend-item_titleCenter{
+            display: flex;
+            justify-content: center;
+            color: #fff;
+            margin-bottom: .27rem;
+            line-height: 1;
+            span{
+                font-size: .426667rem;
+                position:relative;
+                &:before{
+                    position: absolute;
+                    top: 2px;
+                    left: -26px;
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    background: #9c9c9c;
+                    transform: rotate(45deg);
+                }
+                &:after{
+                    position: absolute;
+                    top: 2px;
+                    right: -26px;
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    background: #9c9c9c;
+                    transform: rotate(45deg);
+                }
+            }
+        }
         .recommend-item_content{
             width: 100%;
             box-sizing: border-box;
             overflow: hidden;
             .recommend-item_scroll{
-                overflow: hidden;
-                overflow-x: scroll;
+                width: fit-content;
+                /* overflow-x: scroll; */
                 white-space: nowrap;
                 .recommend-scroll_item{        
                     display: inline-block;
@@ -41,19 +72,22 @@ export const betterScroll = styled.div `
                         width: 100%;
                         display:flex;
                         display: flex;
-                        height: 40px;
+                        height: 35px;
                         justify-content: space-between;
                         align-items:center;
                         .recommend-scroll_text{
-                          
+                          overflow:hidden;
+                          text-overflow: ellipsis;
+                          padding-left:5px;
                         }
                         .recommend-scroll_icon{
                             height:20px;
                             text-align: center;
-                            padding-right:.213333rem;
-                            padding-top:3px;
+                            margin-right:.213333rem;
+                            margin-top:3px;
+
                             img{
-                                height:100%;
+                                /* height:100%; */
                             }
                         }
                     }
@@ -69,17 +103,40 @@ export const betterScroll = styled.div `
                         -webkit-line-clamp: 2;
                         -webkit-box-orient: vertical;
                     }
-                    .recommend-scroll_text{
+                    .recommend-scroll_dotted{
+                        display:flex;
+                        justify-content: space-between;
+                        padding: 10px 0;
                         color: #fff;
-                        padding-left: .213333rem;
-                        padding-top: .213333rem;
-                        line-height: 1;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                        flex: 1 1;
-                        margin-right: 5px;
+                        align-items: baseline;
+                        .recommend-scroll_text{
+                            color: #fff;
+                            padding-left: .213333rem;
+                            padding-top: .213333rem;
+                            line-height: 1;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            flex: 1 1;
+                            margin-right: 5px;
+                        }
                     }
+                    .recommend-scroll_icon{
+                        div{
+                           display:inline-block;
+                           &:nth-child(2){
+                               margin-left:10px;
+                           }
+                        }
+                        img{
+                            width: 14px;
+                            vertical-align: baseline;
+                        }
+                        span{
+                            margin-left:5px;
+                        }
+                    }
+                   
                 }
             }
         }

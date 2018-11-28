@@ -9,6 +9,7 @@ export const navbox = styled.div`
     font-size: .373333rem;
     border-bottom: .026667rem solid #4d4d4d;
     margin-bottom: .533333rem;
+    margin-top:.08rem;
     .nav-box_item{
         box-sizing: border-box;
         flex: 0 0 25%;

@@ -21,15 +21,6 @@ export const swiper = styled.div`
                 }
             }
         }
-        .slider-decorator-0{
-            bottom:.16rem !important;
-        }
-        .am-carousel-wrap-dot > span{
-            background: #ffffff;
-        }
-        .am-carousel-wrap-dot-active > span{
-            background: #de0041;
-        }
     }
     
    

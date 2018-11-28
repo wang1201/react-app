@@ -5,7 +5,6 @@ export const header = styled.div`
     width: 100%;
     height: 1.173333rem;
     line-height:1.173333rem;
-    border:.026667rem solid green;
     .header{
         display: flex;
         background: #080808;

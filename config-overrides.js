@@ -9,6 +9,7 @@ function resolve(url){
 
  module.exports = function override(config, env) {
     config = injectBabelPlugin(['import', { libraryName: 'antd-mobile', style: 'css' }], config);
+    config = injectBabelPlugin(['@babel/plugin-proposal-decorators', { "legacy": true }], config)
     //  配置别名，利于以后配置路径时引用
     // webpack配置文件别名
     console.log(resolve('pages'));
